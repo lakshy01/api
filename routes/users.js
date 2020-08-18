@@ -3,10 +3,6 @@ const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 
-// router.get('/', function (req, res, next) {
-//     res.send('respond with a resource');
-// });
-
 router.get('/login', (req, res) => res.send('Login'));
 
 
