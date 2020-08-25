@@ -1,0 +1,160 @@
+{
+    "customizations": [
+        {
+            "section": "Women",
+            "category": "Casual",
+            "items": "Jeans",
+            "tag": [
+                {
+                    "name": "Waist",
+                    "images": []
+                },
+                {
+                    "name": "Bottom",
+                    "images": []
+                }
+            ]
+        },
+        {
+            "section": "Women",
+            "category": "Casual",
+            "items": "Polo Shirt",
+            "tag": [
+                {
+                    "name": "Neck Front",
+                    "images": []
+                },
+                {
+                    "name": "Neck Back",
+                    "images": []
+                },
+                {
+                    "name": "Front",
+                    "images": []
+                },
+                {
+                    "name": "Back",
+                    "images": []
+                },
+                {
+                    "name": "Sleeves",
+                    "images": []
+                }
+            ]
+        },
+        {
+            "section": "Women",
+            "category": "Casual",
+            "items": "Shorts",
+            "tag": [
+                {
+                    "name": "Bottom",
+                    "images": []
+                }
+            ]
+        },
+        {
+            "section": "Women",
+            "category": "Casual",
+            "items": "T-Shirt",
+            "tag": [
+                {
+                    "name": "Neck",
+                    "images": []
+                },
+                {
+                    "name": "Sleeves",
+                    "images": []
+                },
+                {
+                    "name": "Border",
+                    "images": []
+                }
+            ]
+        },
+        {
+            "section": "Women",
+            "category": "Formals",
+            "items": "Blazers",
+            "tag": [
+                {
+                    "name": "Cuffs",
+                    "images": []
+                },
+                {
+                    "name": "Collars",
+                    "images": []
+                },
+                {
+                    "name": "Front",
+                    "images": []
+                },
+                {
+                    "name": "Back",
+                    "images": []
+                },
+                {
+                    "name": "Pocket",
+                    "images": []
+                }
+            ]
+        },
+        {
+            "section": "Women",
+            "category": "Formals",
+            "items": "Shirts",
+            "tag": [
+                {
+                    "name": "Collars",
+                    "images": []
+                },
+                {
+                    "name": "Cuffs",
+                    "images": []
+                },
+                {
+                    "name": "Front",
+                    "images": []
+                },
+                {
+                    "name": "Back",
+                    "images": []
+                },
+                {
+                    "name": "Pocket",
+                    "images": []
+                }
+            ]
+        },
+        {
+            "section": "Women",
+            "category": "Formals",
+            "items": "Pants",
+            "tag": [
+                {
+                    "name": "Pocket",
+                    "images": []
+                },
+                {
+                    "name": "Front",
+                    "images": []
+                }
+            ]
+        },
+        {
+            "section": "Men",
+            "category": "Formals",
+            "items": "Pants",
+            "tag": [
+                {
+                    "name": "Pocket",
+                    "images": []
+                },
+                {
+                    "name": "Front",
+                    "images": []
+                }
+            ]
+        }
+    ]
+}
