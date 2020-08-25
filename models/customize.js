@@ -29,7 +29,7 @@ const CustomizeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    tags: [{type: mongoose.Schema.Types.ObjectId, ref: "Tag"}]
+    tags: [TagSchema]//{type: mongoose.Schema.Types.ObjectId, ref: "Tag"}
 }, {
     timestamps: true
 });

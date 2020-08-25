@@ -74,7 +74,7 @@ router.route('/:customizationId')//Done
             }, (err) => next(err))
             .catch((err) => next(err));
     });//Done
-router.route('/:customizationId/tags')
+router.route('/:customizationId/tags')//Done
     .get((req, res, next) => {
         Customizations.findById(req.params.customizationId)
             .populate('tags')
@@ -96,13 +96,12 @@ router.route('/:customizationId/tags')
         Customizations.findById(req.params.customizationId)
             .then((customization) => {
                 if (customization != null) {
-                    req.body.tag_id = req.params._id;
+                    // req.body.tag_id = req.params._id;
                     customization.tags.push(req.body);
                     customization.save()
                         .then((customization) => {
                             Customizations.findById(customization._id)
-                                .populate('tags.tag_id')
-                                .exec()
+                                .populate('tags')
                                 .then((customization) => {
                                     res.statusCode = 200;
                                     res.setHeader('Content-Type', 'application/json');
@@ -117,13 +116,13 @@ router.route('/:customizationId/tags')
                 }
             }, (err) => next(err))
             .catch((err) => next(err));
-    })
+    })//Done
 
     .put((req, res, next) => {
         res.statusCode = 403;
         res.end('PUT operation not supported on /dishes/'
             + req.params.customizationId + '/tags');
-    })
+    })//Done
     .delete((req, res, next) => {
         Customizations.findById(req.params.customizationId)
             .then((customization) => {
@@ -145,13 +144,13 @@ router.route('/:customizationId/tags')
                 }
             }, (err) => next(err))
             .catch((err) => next(err));
-    });
+    });//Done
 
 
-router.route('/:customizationId/tags/:tagId')
+router.route('/:customizationId/tags/:tagId')//Done
     .get((req, res, next) => {
         Customizations.findById(req.params.customizationId)
-            .populate('tags._id')
+            .populate('tags')
             .then((customization) => {
                 if (customization != null && customization.tags.id(req.params.tagId) != null) {
                     res.statusCode = 200;
@@ -170,13 +169,13 @@ router.route('/:customizationId/tags/:tagId')
                 }
             }, (err) => next(err))
             .catch((err) => next(err));
-    })
+    })//Done
 
     .post((req, res, next) => {
         res.statusCode = 403;
         res.end('POST operation not supported on /customizations/' + req.params.customizationId
             + '/tags/' + req.params.tagId);
-    })
+    })//Done
 
     .put((req, res, next) => {
         Customizations.findById(req.params.customizationId)
@@ -185,43 +184,13 @@ router.route('/:customizationId/tags/:tagId')
                     if (req.body.images) {
                         customization.tags.id(req.params.tagId).images = req.body.images;
                     }
-                    // if (req.body.name) {
-                    //     customization.tags.id(req.params.tagId).name = req.body.name;
-                    // }
+                    if (req.body.name) {
+                        customization.tags.id(req.params.tagId).name = req.body.name;
+                    }
                     customization.save()
                         .then((customization) => {
                             Customizations.findById(customization._id)
-                                .populate('tags._id')
-                                .then((customization) => {
-                                    res.statusCode = 200;
-                                    res.setHeader('Content-Type', 'application/json');
-                                    res.json(customization);
-                                })
-                        }, (err) => next(err));
-                }
-                else if (customization == null) {
-                    err = new Error('Customization ' + req.params.customizationId + ' not found');
-                    err.status = 404;
-                    return next(err);
-                }
-                else {
-                    err = new Error('Comment ' + req.params.tagId + ' not found');
-                    err.status = 404;
-                    return next(err);
-                }
-            }, (err) => next(err))
-            .catch((err) => next(err));
-    })
-    .delete((req, res, next) => {
-        Customizations.findById(req.params.customizationId)
-            .then((customization) => {
-                if (customization != null && customization.tags.id(req.params.tagId) != null) {
-
-                    customization.tags.id(req.params.tagId).remove();
-                    customization.save()
-                        .then((customization) => {
-                            Customizations.findById(customization._id)
-                                .populate('tags._id')
+                                .populate('tags')
                                 .then((customization) => {
                                     res.statusCode = 200;
                                     res.setHeader('Content-Type', 'application/json');
@@ -241,7 +210,37 @@ router.route('/:customizationId/tags/:tagId')
                 }
             }, (err) => next(err))
             .catch((err) => next(err));
-    });
+    })//Done
+    .delete((req, res, next) => {
+        Customizations.findById(req.params.customizationId)
+            .then((customization) => {
+                if (customization != null && customization.tags.id(req.params.tagId) != null) {
+
+                    customization.tags.id(req.params.tagId).remove();
+                    customization.save()
+                        .then((customization) => {
+                            Customizations.findById(customization._id)
+                                .populate('tags')
+                                .then((customization) => {
+                                    res.statusCode = 200;
+                                    res.setHeader('Content-Type', 'application/json');
+                                    res.json(customization);
+                                })
+                        }, (err) => next(err));
+                }
+                else if (customization == null) {
+                    err = new Error('Customization ' + req.params.customizationId + ' not found');
+                    err.status = 404;
+                    return next(err);
+                }
+                else {
+                    err = new Error('Tag ' + req.params.tagId + ' not found');
+                    err.status = 404;
+                    return next(err);
+                }
+            }, (err) => next(err))
+            .catch((err) => next(err));
+    });//Done
 
 module.exports = router;
 
