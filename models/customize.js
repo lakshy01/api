@@ -3,13 +3,17 @@ const mongoose = require("mongoose");
 const TagSchema = new mongoose.Schema({
     tag_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Customization"
+        ref: 'Customization'
     },
     name: {//Collar, Cuffs, Pocket
         type: String,
         required: true
     },
-    images: []
+    images: [
+        {
+            type: String
+        },
+    ]
 }, {
     timestamps: true
 });

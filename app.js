@@ -3,8 +3,22 @@ const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const session = require("express-session");
 const passport = require("passport");
+const cors = require("cors")
 
 const app = express();
+
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+//   });
+app.use(cors());
+// app.use(cors({
+//     'allowedHeaders': '*',//['sessionId', 'Content-Type'],
+//     'origin': '*',
+//     'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     'preflightContinue': false
+//   }));
 
 //Passport config
 require('./config/passport')(passport);

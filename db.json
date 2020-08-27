@@ -16,16 +16,12 @@
             ]
         },
         {
-            "section": "Women",
+            "section": "Men",
             "category": "Casual",
             "items": "Polo Shirt",
             "tag": [
                 {
-                    "name": "Neck Front",
-                    "images": []
-                },
-                {
-                    "name": "Neck Back",
+                    "name": "Neck",
                     "images": []
                 },
                 {
@@ -79,10 +75,11 @@
             "tag": [
                 {
                     "name": "Cuffs",
-                    "images": []
+                    "images": ["https://drive.google.com/file/d/1fKWPeouV2RZi6VnCPKvXsel9KZ1VkWG-/view?usp=sharing",
+                    "https://drive.google.com/file/d/1m2GWq4C_oFJFbXWAkx91JIAOQEPWEJyz/view?usp=sharing"]
                 },
                 {
-                    "name": "Collars",
+                    "name": "Collar",
                     "images": []
                 },
                 {
