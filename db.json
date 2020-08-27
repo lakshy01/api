@@ -1,28 +1,31 @@
 {
     "customizations": [
         {
-            "section": "Women",
-            "category": "Casual",
+            "section": "Men",
             "items": "Jeans",
             "tag": [
                 {
-                    "name": "Waist",
+                    "name": "Pocket",
                     "images": []
                 },
                 {
-                    "name": "Bottom",
+                    "name": "Fit",
                     "images": []
                 }
             ]
         },
         {
             "section": "Men",
-            "category": "Casual",
             "items": "Polo Shirt",
             "tag": [
                 {
-                    "name": "Neck",
-                    "images": []
+                    "name": "Collar",
+                    "images": [
+                        "https://drive.google.com/file/d/1rKdQRGilxwNMPutwN2AdE_GOMvbLnxlH/view?usp=sharing",
+                        "https://drive.google.com/file/d/1Lch6qpkxr4MFwpThlR7Yj7ivhO60UrP5/view?usp=sharing",
+                        "https://drive.google.com/file/d/1G62fAz1UnrPdz_jOyZsp_ee1imsnonQ2/view?usp=sharing",
+                        "https://drive.google.com/file/d/1XQXkssYLf_QKvTED1Qsd7xeeOjp7ar_3/view?usp=sharing"
+                    ]
                 },
                 {
                     "name": "Front",
@@ -40,7 +43,6 @@
         },
         {
             "section": "Women",
-            "category": "Casual",
             "items": "Shorts",
             "tag": [
                 {
@@ -51,7 +53,6 @@
         },
         {
             "section": "Women",
-            "category": "Casual",
             "items": "T-Shirt",
             "tag": [
                 {
@@ -70,17 +71,22 @@
         },
         {
             "section": "Women",
-            "category": "Formals",
             "items": "Blazers",
             "tag": [
                 {
                     "name": "Cuffs",
-                    "images": ["https://drive.google.com/file/d/1fKWPeouV2RZi6VnCPKvXsel9KZ1VkWG-/view?usp=sharing",
-                    "https://drive.google.com/file/d/1m2GWq4C_oFJFbXWAkx91JIAOQEPWEJyz/view?usp=sharing"]
+                    "images": [
+                        "https://drive.google.com/file/d/1fKWPeouV2RZi6VnCPKvXsel9KZ1VkWG-/view?usp=sharing",
+                        "https://drive.google.com/file/d/1m2GWq4C_oFJFbXWAkx91JIAOQEPWEJyz/view?usp=sharing"
+                    ]
                 },
                 {
                     "name": "Collar",
-                    "images": []
+                    "images": [
+                        "https://drive.google.com/file/d/1va_pOBafoUr7KDlCcgZe3yuOUswj7HB2/view?usp=sharing",
+                        "https://drive.google.com/file/d/1moxGsGyruBHuiNT3-2qTkagUSsGLpPFg/view?usp=sharing",
+                        "https://drive.google.com/file/d/18MFB1HwgsbjP08nh1L7meeSUZTaNdlNY/view?usp=sharing"
+                    ]
                 },
                 {
                     "name": "Front",
@@ -98,16 +104,23 @@
         },
         {
             "section": "Women",
-            "category": "Formals",
             "items": "Shirts",
             "tag": [
                 {
                     "name": "Collars",
-                    "images": []
+                    "images": [
+                        "https://drive.google.com/file/d/1RRkIu5iHg-6OUpw3ZDzXSp6CBZ2G1Bb6/view?usp=sharing",
+                        "https://drive.google.com/file/d/1SjyAUUaZAzK6oqvacXdIeqjTAikjHKQU/view?usp=sharing",
+                        "https://drive.google.com/file/d/1jitZlyCbxwiWFf4R96OoXPHqs-ZH1ZAM/view?usp=sharing"
+                    ]
                 },
                 {
                     "name": "Cuffs",
-                    "images": []
+                    "images": [
+                        "https://drive.google.com/file/d/1JSMaJsFvWpK88g1ssqm3WdpV7Nq73bw9/view?usp=sharing",
+                        "https://drive.google.com/file/d/1941Va-hkvs2Vqyw9zfPMs1pNSlh3K76b/view?usp=sharing",
+                        "https://drive.google.com/file/d/1H9J0n8xgUhIhGS_CFWjv1WtKuTJ_mv1l/view?usp=sharing"
+                    ]
                 },
                 {
                     "name": "Front",
@@ -124,23 +137,21 @@
             ]
         },
         {
-            "section": "Women",
-            "category": "Formals",
-            "items": "Pants",
+            "section": "Kids",
+            "items": "Frock",
             "tag": [
                 {
-                    "name": "Pocket",
+                    "name": "Layers",
                     "images": []
                 },
                 {
-                    "name": "Front",
+                    "name": "Sleeves",
                     "images": []
                 }
             ]
         },
         {
             "section": "Men",
-            "category": "Formals",
             "items": "Pants",
             "tag": [
                 {

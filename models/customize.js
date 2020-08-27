@@ -25,10 +25,6 @@ const CustomizeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    category: {//Casual, Ethnic, Formal
-        type: String,
-        required: true
-    },
     items: {//Pant, Shirt
         type: String,
         required: true
