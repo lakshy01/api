@@ -7,7 +7,7 @@ const Tag = require('../models/customize')
 router.route('/') //Done
     .get((req, res, next) => {
         Customizations.find({})
-            .populate('tags._id')
+            .populate('tags')
             .then((customizations) => {
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
@@ -29,20 +29,11 @@ router.route('/') //Done
         res.statusCode = 403;
         res.end('PUT operation not supported on /customizations');
     })//Done
-    .delete((req, res, next) => {
-        Customizations.remove({})
-            .then((resp) => {
-                res.statusCode = 200;
-                res.setHeader('Content-Type', 'application/json');
-                res.json(resp);
-            }, (err) => next(err))
-            .catch((err) => next(err));
-    });//Done
 
 router.route('/:customizationId')//Done
     .get((req, res, next) => {
         Customizations.findById(req.params.customizationId)
-            .populate('tags._id')
+            .populate('tags')
             .then((customization) => {
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
@@ -74,6 +65,7 @@ router.route('/:customizationId')//Done
             }, (err) => next(err))
             .catch((err) => next(err));
     });//Done
+
 router.route('/:customizationId/tags')//Done
     .get((req, res, next) => {
         Customizations.findById(req.params.customizationId)
@@ -122,29 +114,6 @@ router.route('/:customizationId/tags')//Done
         res.end('PUT operation not supported on /dishes/'
             + req.params.customizationId + '/tags');
     })//Done
-    .delete((req, res, next) => {
-        Customizations.findById(req.params.customizationId)
-            .then((customization) => {
-                if (customization != null) {
-                    for (var i = (customization.tags.length - 1); i >= 0; i--) {
-                        customization.tags.id(customization.tags[i]._id).remove();
-                    }
-                    customization.save()
-                        .then((customization) => {
-                            res.statusCode = 200;
-                            res.setHeader('Content-Type', 'application/json');
-                            res.json(customization);
-                        }, (err) => next(err));
-                }
-                else {
-                    err = new Error('Customization ' + req.params.customizationId + ' not found');
-                    err.status = 404;
-                    return next(err);
-                }
-            }, (err) => next(err))
-            .catch((err) => next(err));
-    });//Done
-
 
 router.route('/:customizationId/tags/:tagId')//Done
     .get((req, res, next) => {
