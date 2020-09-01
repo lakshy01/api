@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 
 const formSchema = new mongoose.Schema({
+
+    userId: {
+        type: String,
+        require: true
+    },
     item: {//Men,Women
         type: String,
         required: true
